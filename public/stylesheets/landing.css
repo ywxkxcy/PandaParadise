@@ -1,0 +1,71 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+  padding-bottom: 5vh;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://thumbs-prod.si-cdn.com/_d5RKoH-xbLKlLQQZbVObvGwChI=/fit-in/1600x0/https://public-media.si-cdn.com/filer/4c/e6/4ce64d1d-5432-443e-b783-8185fe20c792/pandas.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://institute.sandiegozoo.org/sites/default/files/heros-giant-panda.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://crosstalk.cell.com/hs-fs/hubfs/Images/Jennifer%20Levine/New%20Insights%20into%20pandas,/6990634-panda-hug.jpg?width=2560&height=1600&name=6990634-panda-hug.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.gannett-cdn.com/-mm-/8ec5d09776cb16d4fc0180df562106e57760eb95/c=0-148-4253-2551/local/-/media/2018/04/03/USATODAY/USATODAY/636583772913864667-XXX-PANDAS-PDS-00508-98906967.JPG?width=3200&height=1680&fit=crop);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://cms.qz.com/wp-content/uploads/2017/10/panda.jpg?quality=75&strip=all&w=1600&h=900&crop=1);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

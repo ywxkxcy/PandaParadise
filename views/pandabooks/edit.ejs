@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Edit <%= pandabook.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/pandabooks/<%= pandabook._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pandabook[name]" value="<%= pandabook.name %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pandabook[location]" value="<%= pandabook.location %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pandabook[image]" value="<%= pandabook.image %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pandabook[description]" value="<%= pandabook.description %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/pandabooks">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+
