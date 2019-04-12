@@ -2,6 +2,7 @@ var express = require("express");
 var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
+var Pandabook = require("../models/pandabook");
 
 //root route
 router.get("/", function(req, res){
@@ -15,7 +16,14 @@ router.get("/register", function(req, res){
 
 //handle sign up logic
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username});
+    var newUser = new User(
+        {
+            username: req.body.username, 
+            firstName: req.body.firstName,
+            lastNmae: req.body.lastName,
+            email: req.body.email,
+            avatar: req.body.avatar,
+        });
     // verify if the user is admin
     if(req.body.adminCode === 'admin') {
         newUser.isAdmin = true;
@@ -51,6 +59,24 @@ router.get("/logout", function(req, res){
    req.flash("success", "Logged you out!");
    res.redirect("/pandabooks");
 });
+
+// USERS PROFILES
+router.get("/users/:id", function(req, res){
+   User.findById(req.params.id, function(err, foundUser) {
+       if(err) {
+           req.flash("error", "Something went wrong");
+           res.redirect("/");
+       };
+       Pandabook.find().where('author.id').equals(foundUser._id).exec(function(err, pandabooks) {
+           if(err) {
+            req.flash("error", "Something went wrong");
+            res.redirect("/");
+            };
+            res.render("users/show", {user: foundUser, pandabooks: pandabooks});
+       })
+   }); 
+});
+
 
 
 
