@@ -6,14 +6,26 @@ var middleware = require("../middleware");
 
 //INDEX - show all pandabooks
 router.get("/", function(req, res){
+  if(req.query.search) {
+    const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+      // Get all pandabooks from DB
+      Pandabook.find({name: regex}, function(err, allPandabooks){
+         if(err){
+             console.log(err);
+         } else {
+            res.render("pandabooks/index",{pandabooks:allPandabooks});
+         }
+      });
+  } else {
     // Get all pandabooks from DB
     Pandabook.find({}, function(err, allPandabooks){
-       if(err){
-           console.log(err);
-       } else {
+      if(err){
+          console.log(err);
+      } else {
           res.render("pandabooks/index",{pandabooks:allPandabooks, page: 'pandabooks'});
-       }
+      }
     });
+  }
 });
 
 //CREATE - add new pandabook to DB
@@ -97,6 +109,9 @@ router.delete("/:id",middleware.checkPandabookOwnership, function(req, res){
    });
 });
 
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 module.exports = router;
 
