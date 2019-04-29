@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="thumbnail" style="text-align: center;">
+            <h1><%= user.firstName + "" + user.lastName %></h1>
+            <img src="<%= user.avatar %>" alt="the user does not have profile image">
+            <div class="caption"><a href="mail to: <% user.email %>"><%= user.email %></a></div>
+        </div>
+        <h3><%= user.username %>'s contribution</h3>
+        <ul>
+            <% pandabooks.forEach(function(pandabook) { %>
+            <li><a href="/pandabooks/<%= pandabook.id %>"><%= pandabook.name %></a></li>
+            <% }); %>
+        </ul>
+    </div>
+     <div class="col-md-4"></div>
+</div>
+
+<% include ../partials/footer %>

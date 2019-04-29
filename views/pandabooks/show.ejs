@@ -20,7 +20,7 @@
           <h4><a><%=pandabook.name%></a></h4>
           <p><%= pandabook.description %></p>
           <p>
-            <em>Submitted by: <%= pandabook.author.username %>, <%= moment(pandabook.createdAt).fromNow() %></em>
+            <em>Submitted by: <a href="/users/<%= pandabook.author.id %>"><%= pandabook.author.username %></a>, <%= moment(pandabook.createdAt).fromNow() %></em>
           </p>
             <% if(currentUser && pandabook.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                   <a class="btn btn-xs btn-warning" href="/pandabooks/<%= pandabook._id %>/edit">Edit</a>
