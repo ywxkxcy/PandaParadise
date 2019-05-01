@@ -1,10 +1,10 @@
-#YelpCamp
+#Pandabook
 
 ##Initial Setup
 * Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+* Add Pandabooks Page that lists all pandabooks
 
-Each Campground has:
+Each Pandabook has:
    * Name
    * Image
 
@@ -12,28 +12,28 @@ Each Campground has:
 * Create our header and footer partials
 * Add in Bootstrap
 
-##Creating New Campgrounds
-* Setup new campground POST route
+##Creating New Pandabooks
+* Setup new pandabook POST route
 * Add in body-parser
 * Setup route to show form
 * Add basic unstyled form
 
-##Style the campgrounds page
+##Style the pandabooks page
 * Add a better header/title
-* Make campgrounds display in a grid
+* Make pandabooks display in a grid
 
 ##Style the Navbar and Form
 * Add a navbar to all templates
-* Style the new campground form
+* Style the new pandabook form
 
 ##Add Mongoose
 * Install and configure Mongoose
-* Setup campground model
-* Use campground model inside of our routes
+* Setup pandabook model
+* Use pandabook model inside of our routes
 
 ##Show Page
 * Review the RESTful routes we've seen so far
-* Add description to our campground model
+* Add description to our pandabook model
 * Show db.collection.drop()
 * Add a show route/template
 
@@ -48,7 +48,7 @@ Each Campground has:
 
 ##Add the Comment model!
 * Make our errors go away!
-* Display comments on campground show page
+* Display comments on pandabook show page
 
 ##Comment New/Create
 * Discuss nested routes
@@ -91,23 +91,23 @@ Each Campground has:
 * Associate users and comments
 * Save author's name to a comment automatically
 
-##Users + Campgrounds
-* Prevent an unauthenticated user from creating a campground
-* Save username+id to newly created campground
+##Users + Pandabooks
+* Prevent an unauthenticated user from creating a pandabook
+* Save username+id to newly created pandabook
 
-# Editing Campgrounds
+# Editing Pandabooks
 * Add Method-Override
-* Add Edit Route for Campgrounds
+* Add Edit Route for Pandabooks
 * Add Link to Edit Page
 * Add Update Route
 
-#Deleting Campgrounds
+#Deleting Pandabooks
 * Add Destroy Route
 * Add Delete button
 
-#Authorization Part 1: Campgrounds
-* User can only edit his/her campgrounds
-* User can only delete his/her campgrounds
+#Authorization Part 1: Pandabooks
+* User can only edit his/her pandabooks
+* User can only delete his/her pandabooks
 * Hide/Show edit and delete buttons
 
 #Editing Comments
@@ -115,8 +115,8 @@ Each Campground has:
 * Add Edit button
 * Add Update route
 
-<!--/campgrounds/:id/edit-->
-<!--/campgrounds/:id/comments/:comment_id/edit-->
+<!--/pandabooks/:id/edit-->
+<!--/pandabooks/:id/comments/:comment_id/edit-->
 
 #Deleting Comments
 * Add Destroy route
@@ -143,10 +143,10 @@ NEW     /dogs/new  GET   Displays form to make a new dog
 CREATE  /dogs      POST  Add new dog to DB
 SHOW    /dogs/:id  GET   Shows info about one dog
 
-INDEX   /campgrounds
-NEW     /campgrounds/new
-CREATE  /campgrounds
-SHOW    /campgrounds/:id
+INDEX   /pandabooks
+NEW     /pandabooks/new
+CREATE  /pandabooks
+SHOW    /pandabooks/:id
 
-NEW     campgrounds/:id/comments/new    GET
-CREATE  campgrounds/:id/comments      POST
+NEW     pandabooks/:id/comments/new    GET
+CREATE  pandabooks/:id/comments      POST

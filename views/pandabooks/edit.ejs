@@ -3,7 +3,7 @@
     <div class="row">
         <h1 style="text-align: center">Edit <%= pandabook.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
-            <form action="/pandabooks/<%= pandabook._id %>?_method=PUT" method="POST">
+            <form action="/pandabooks/<%= pandabook._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <input class="form-control" type="text" name="pandabook[name]" value="<%= pandabook.name %>">
                 </div>
@@ -11,7 +11,8 @@
                     <input class="form-control" type="text" name="pandabook[location]" value="<%= pandabook.location %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="pandabook[image]" value="<%= pandabook.image %>">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" accept="image/*">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="pandabook[description]" value="<%= pandabook.description %>">
