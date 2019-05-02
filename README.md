@@ -2,7 +2,7 @@
 
 ##Initial Setup
 * Add Landing Page
-* Add Pandabooks Page that lists all pandabooks
+* Add Pandabooks Page that lists all Pandabooks
 
 Each Pandabook has:
    * Name
@@ -13,27 +13,27 @@ Each Pandabook has:
 * Add in Bootstrap
 
 ##Creating New Pandabooks
-* Setup new pandabook POST route
+* Setup new Pandabook POST route
 * Add in body-parser
 * Setup route to show form
 * Add basic unstyled form
 
-##Style the pandabooks page
+##Style the Pandabooks page
 * Add a better header/title
-* Make pandabooks display in a grid
+* Make Pandabooks display in a grid
 
 ##Style the Navbar and Form
 * Add a navbar to all templates
-* Style the new pandabook form
+* Style the new Pandabook form
 
 ##Add Mongoose
 * Install and configure Mongoose
-* Setup pandabook model
-* Use pandabook model inside of our routes
+* Setup Pandabook model
+* Use Pandabook model inside of our routes
 
 ##Show Page
 * Review the RESTful routes we've seen so far
-* Add description to our pandabook model
+* Add description to our Pandabook model
 * Show db.collection.drop()
 * Add a show route/template
 
@@ -48,7 +48,7 @@ Each Pandabook has:
 
 ##Add the Comment model!
 * Make our errors go away!
-* Display comments on pandabook show page
+* Display comments on Pandabook show page
 
 ##Comment New/Create
 * Discuss nested routes
@@ -92,8 +92,8 @@ Each Pandabook has:
 * Save author's name to a comment automatically
 
 ##Users + Pandabooks
-* Prevent an unauthenticated user from creating a pandabook
-* Save username+id to newly created pandabook
+* Prevent an unauthenticated user from creating a Pandabook
+* Save username+id to newly created Pandabook
 
 # Editing Pandabooks
 * Add Method-Override
@@ -106,8 +106,8 @@ Each Pandabook has:
 * Add Delete button
 
 #Authorization Part 1: Pandabooks
-* User can only edit his/her pandabooks
-* User can only delete his/her pandabooks
+* User can only edit his/her Pandabooks
+* User can only delete his/her Pandabooks
 * Hide/Show edit and delete buttons
 
 #Editing Comments
@@ -115,8 +115,8 @@ Each Pandabook has:
 * Add Edit button
 * Add Update route
 
-<!--/pandabooks/:id/edit-->
-<!--/pandabooks/:id/comments/:comment_id/edit-->
+<!--/Pandabooks/:id/edit-->
+<!--/Pandabooks/:id/comments/:comment_id/edit-->
 
 #Deleting Comments
 * Add Destroy route
@@ -143,10 +143,10 @@ NEW     /dogs/new  GET   Displays form to make a new dog
 CREATE  /dogs      POST  Add new dog to DB
 SHOW    /dogs/:id  GET   Shows info about one dog
 
-INDEX   /pandabooks
-NEW     /pandabooks/new
-CREATE  /pandabooks
-SHOW    /pandabooks/:id
+INDEX   /Pandabooks
+NEW     /Pandabooks/new
+CREATE  /Pandabooks
+SHOW    /Pandabooks/:id
 
-NEW     pandabooks/:id/comments/new    GET
-CREATE  pandabooks/:id/comments      POST
+NEW     Pandabooks/:id/comments/new    GET
+CREATE  Pandabooks/:id/comments      POST

@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     pandabookRoutes = require("./routes/pandabooks"),
     indexRoutes      = require("./routes/index")
     
-mongoose.connect("mongodb://localhost/yelp_camp_v12");
+mongoose.connect("mongodb+srv://ywxkxcy:Xcy*8058300@cluster0-cw8yd.mongodb.net/test?retryWrites=true");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
