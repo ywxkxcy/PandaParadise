@@ -9,12 +9,12 @@ var express     = require("express"),
     Pandabook  = require("./models/pandabook"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
-    seedDB      = require("./seeds")
+    seedDB      = require("./seeds");
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
     pandabookRoutes = require("./routes/pandabooks"),
-    indexRoutes      = require("./routes/index")
+    indexRoutes      = require("./routes/index");
     
 mongoose.connect("mongodb+srv://ywxkxcy:Xcy*8058300@cluster0-cw8yd.mongodb.net/test?retryWrites=true");
 app.use(bodyParser.urlencoded({extended: true}));
