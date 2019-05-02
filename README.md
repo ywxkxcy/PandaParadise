@@ -1,152 +1,70 @@
-#Pandabook
+# Pandabook
 
-##Initial Setup
-* Add Landing Page
-* Add Pandabooks Page that lists all Pandabooks
+## Live Demo
 
-Each Pandabook has:
-   * Name
-   * Image
+To see the app in action, go to [https://pandabooks.herokuapp.com/](https://pandabooks.herokuapp.com/)
 
-##Layout and Basic Styling
-* Create our header and footer partials
-* Add in Bootstrap
+## Description
 
-##Creating New Pandabooks
-* Setup new Pandabook POST route
-* Add in body-parser
-* Setup route to show form
-* Add basic unstyled form
+Pandabook is a RESTful webde application signed for panda fans to explore the pandas around the world. 
 
-##Style the Pandabooks page
-* Add a better header/title
-* Make Pandabooks display in a grid
+## Features
 
-##Style the Navbar and Form
-* Add a navbar to all templates
-* Style the new Pandabook form
+* Authentication:
+  
+  * User login with username and password
 
-##Add Mongoose
-* Install and configure Mongoose
-* Setup Pandabook model
-* Use Pandabook model inside of our routes
+  * Administer sign-up with admin code
 
-##Show Page
-* Review the RESTful routes we've seen so far
-* Add description to our Pandabook model
-* Show db.collection.drop()
-* Add a show route/template
+* Authorization:
 
-##Refactor Mongoose Code
-* Create a models directory
-* Use module.exports
-* Require everything correctly!
+  * User cannot manage posts and view user profile without being authenticated
 
-##Add Seeds File
-* Add a seeds.js file
-* Run the seeds file every time the server starts
+  * User cannot edit or delete posts and comments created by other users
 
-##Add the Comment model!
-* Make our errors go away!
-* Display comments on Pandabook show page
+  * Administer can manage all posts and comments
 
-##Comment New/Create
-* Discuss nested routes
-* Add the comment new and create routes
-* Add the new comment form
+* Manage pandabook posts with basic functionalities:
 
-##Style Show Page
-* Add sidebar to show page
-* Display comments nicely
+  * Create, edit and delete posts and comments
 
-##Finish Styling Show Page
-* Add public directory
-* Add custom stylesheet
+  * Upload pandabook photos
+  
+  * Search existing pandabooks
 
-##Auth Pt. 1 - Add User Model
-* Install all packages needed for auth
-* Define User model 
+* Manage user account with basic functionalities:
 
-##Auth Pt. 2 - Register
-* Configure Passport
-* Add register routes
-* Add register template
+  * Profile page setup with sign-up
 
-##Auth Pt. 3 - Login
-* Add login routes
-* Add login template
+* Flash messages responding to users' interaction with the app
 
-##Auth Pt. 4 - Logout/Navbar
-* Add logout route
-* Prevent user from adding a comment if not signed in
-* Add links to navbar
+* Fuzzy search with key word
 
-##Auth Pt. 5 - Show/Hide Links
-* Show/hide auth links in navbar 
+* Responsive web design
 
-##Refactor The Routes
-* Use Express router to reoragnize all routes
+## Built with
 
-##Users + Comments
-* Associate users and comments
-* Save author's name to a comment automatically
+### Front-end
 
-##Users + Pandabooks
-* Prevent an unauthenticated user from creating a Pandabook
-* Save username+id to newly created Pandabook
+* [ejs](http://ejs.co/)
+* [Bootstrap](https://getbootstrap.com/docs/3.3/)
 
-# Editing Pandabooks
-* Add Method-Override
-* Add Edit Route for Pandabooks
-* Add Link to Edit Page
-* Add Update Route
+### Back-end
 
-#Deleting Pandabooks
-* Add Destroy Route
-* Add Delete button
+* [express](https://expressjs.com/)
+* [mongoDB](https://www.mongodb.com/)
+* [mongoose](http://mongoosejs.com/)
+* [async](http://caolan.github.io/async/)
+* [passport](http://www.passportjs.org/)
+* [passport-local](https://github.com/jaredhanson/passport-local#passport-local)
+* [express-session](https://github.com/expressjs/session#express-session)
+* [method-override](https://github.com/expressjs/method-override#method-override)
+* [nodemailer](https://nodemailer.com/about/)
+* [moment](https://momentjs.com/)
+* [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
 
-#Authorization Part 1: Pandabooks
-* User can only edit his/her Pandabooks
-* User can only delete his/her Pandabooks
-* Hide/Show edit and delete buttons
+### Platforms
 
-#Editing Comments
-* Add Edit route for comments
-* Add Edit button
-* Add Update route
-
-<!--/Pandabooks/:id/edit-->
-<!--/Pandabooks/:id/comments/:comment_id/edit-->
-
-#Deleting Comments
-* Add Destroy route
-* Add Delete button
-
-#Authorization Part 2: Comments
-* User can only edit his/her comments
-* User can only delete his/her comments
-* Hide/Show edit and delete buttons
-* Refactor Middleware
-
-#Adding in Flash!
-* Demo working version
-* Install and configure connect-flash
-* Add bootstrap alerts to header
-
-
-RESTFUL ROUTES
-
-name      url      verb    desc.
-===============================================
-INDEX   /dogs      GET   Display a list of all dogs
-NEW     /dogs/new  GET   Displays form to make a new dog
-CREATE  /dogs      POST  Add new dog to DB
-SHOW    /dogs/:id  GET   Shows info about one dog
-
-INDEX   /Pandabooks
-NEW     /Pandabooks/new
-CREATE  /Pandabooks
-SHOW    /Pandabooks/:id
-
-NEW     Pandabooks/:id/comments/new    GET
-CREATE  Pandabooks/:id/comments      POST
+* [Heroku](https://www.heroku.com/)
+* [MongoDB Atlas](https://cloud.mongodb.com)
+* [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
