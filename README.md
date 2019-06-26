@@ -6,7 +6,7 @@ To see the app in action, go to [https://pandabooks.herokuapp.com/](https://pand
 
 ## Description
 
-Pandabook is signed for panda fans to explore the pandas around the world. It is a full stack web application using Node.js/Express framework and RESTful APIs. Bootstrap 4 and npm packages is used to implement the panda infomation system with password authentication, user and administer authorization, posts management, falsh message interaction and fuzzy search. MongoDB is utilized for back-end database operation to store pandas’ information and user portfolilo including username, avatar and hashed password.
+Pandabook is designed for panda fans to explore the pandas around the world. It is a full stack web application using Node.js/Express framework and RESTful APIs. Bootstrap 4 and npm packages is used to implement the panda infomation system with password authentication, user and administer authorization, posts management, falsh message interaction and fuzzy search. MongoDB is utilized for back-end database operation to store pandas’ information and user portfolilo including username, avatar and hashed password.
 
 ## Features
 
